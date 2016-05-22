@@ -1,0 +1,21 @@
+{
+  "name": "maxflow",
+  "homepage": "http://isabek.github.io/max-flow/",
+  "authors": [
+    "Isabek <isabek2309@gmail.com>"
+  ],
+  "description": "Max Flow Visualizer",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "cytoscape": "^2.6.12",
+    "cytoscape-edgehandles": "^2.4.0"
+  }
+}

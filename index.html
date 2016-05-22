@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Flow Visualization</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/cy.css"/>
+</head>
+<body class="mini-navbar">
+<div id="wrapper">
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <span class="description">Max Flow and Min Cut</span>
+                </div>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="ibox float-e-margins" style="padding: 0 !important;">
+                        <div class="ibox-content" style="padding: 0 !important;">
+                            <div class="row">
+                                <div id="cy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Result</h5>
+                        </div>
+                        <div class="ibox-content" id="log-container">
+                            <p class="text-info" id="status"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div class="col-md-5">
+                        <input type="text" id="label" class="form-control input-sm text-center">
+                    </div>
+                    <div>
+                        <button type="button" id="label-btn" class="btn btn-primary btn-sm">Update</button>
+                    </div>
+                </div>
+            </div>
+
+            <form method="get" class="form-horizontal">
+                <div class="col-sm-7">
+                    <div class="col-md-2">
+                        <div class="form-group has-success">
+                            <label class="col-sm-1 control-label">S=</label>
+
+                            <div class="col-sm-7" style="padding-left: 5px !important;">
+                                <input type="text" id="source" class="form-control input-sm text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group has-success">
+                            <label class="col-sm-1 control-label">T=</label>
+
+                            <div class="col-sm-7" style="padding-left: 5px !important;">
+                                <input type="text" id="sink" class="form-control input-sm text-center">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary  btn-sm" id="fulkerson" type="submit">Compute Max-Flow</button>
+                    <button class="btn btn-info  btn-sm" style="margin-left: 40px;" id="add-graph" type="submit">
+                        Example
+                    </button>
+                    <button class="btn btn-success  btn-sm " style="margin-left: 40px;" id="reset" type="submit">Reset
+                    </button>
+                    <button class="btn btn-danger  btn-sm" id="clear" type="submit">Clear</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Isabek Tashiev &copy; 2016
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/vendor/js/jquery.min.js"></script>
+<script src="/vendor/js/cytoscape.min.js"></script>
+<script src="/vendor/js/cytoscape-edgehandles.js"></script>
+<script src="js/graph.js"></script>
+<script src="js/max-flow.js"></script>
+</body>
+</html>
+
