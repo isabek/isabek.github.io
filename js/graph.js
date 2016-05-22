@@ -120,17 +120,28 @@ $(function () {
     handleNodes: 'node'
   });
 
-  var id = 1;
-  var $cy = $('#cy');
+  function getId() {
+    var ids = cy.nodes().map(function (node) {
+      return node.id();
+    });
+    for (var i = 0; i < ids.length; i++) {
+      if (ids[i] != i + 1) {
+        return i + 1;
+      }
+    }
+    return ids.length + 1;
+  }
 
+  var $cy = $('#cy');
   $cy.dblclick(function (e) {
+    var id = getId();
     var posX = e.pageX - $cy.offset().left;
     var posY = e.pageY - $cy.offset().top;
     addNode(cy, id, id, posX, posY);
     if (id > 1) $('#sink').val(id);
     if (id == 1) $('#source').val(id);
-    id++;
   });
+
 
   $('html').keyup(function (e) {
     if (e.keyCode == 46) {
@@ -397,5 +408,3 @@ $(function () {
 
   $add.trigger('click');
 });
-
-

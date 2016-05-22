@@ -91,3 +91,5 @@ FlowNetwork.prototype.bfs = function (source, target, parent) {
   }
   return visited.indexOf(target) !== -1;
 };
+
+Window.FlowNetwork = FlowNetwork;
