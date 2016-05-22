@@ -1,0 +1,25 @@
+body {
+    font: 14px helvetica neue, helvetica, arial, sans-serif;
+}
+
+#cy {
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background: #ffffff;
+    border-image: none;
+    padding: 0;
+    min-height: 300px;
+    clear: both;
+    display: block;
+    height: 500px;
+}
+
+.description {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1ab394;
+    margin-top: 18px;
+    margin-left: 30px;
+    display: block;
+}
