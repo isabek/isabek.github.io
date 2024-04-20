@@ -133,7 +133,7 @@ $(function () {
   });
 
   $('html').keyup(function (e) {
-    if (e.keyCode == 46) {
+    if (e.keyCode == 46 || e.keyCode == 8) {
       cy.$(':selected').remove();
     }
   });
