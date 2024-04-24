@@ -1,1 +1,1 @@
-isabek.github.io
+https://isabek.github.io
